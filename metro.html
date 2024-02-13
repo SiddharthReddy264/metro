@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Destination Finder</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Metro Destination Finder</h2>
+        <label for="startStation">Starting Station:</label>
+        <input type="text" id="startStation" placeholder="Enter starting station...">
+        <label for="destinationStation">Destination Station:</label>
+        <input type="text" id="destinationStation" placeholder="Enter destination station...">
+        <button onclick="findShortestPath()">Find Shortest Path</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // JavaScript code to interact with the Java code
+        function findShortestPath() {
+            var startStation = document.getElementById("startStation").value;
+            var destinationStation = document.getElementById("destinationStation").value;
+
+            // Call Java code or display the result directly using JavaScript
+            // For simplicity, let's display a dummy result
+            var result = "Shortest path from " + startStation + " to " + destinationStation + ":<br>";
+            result += startStation + " -> Kothapet -> Dilshad Nagar -> " + destinationStation + "<br>";
+            result += "Estimated travel time: 25 minutes";
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
